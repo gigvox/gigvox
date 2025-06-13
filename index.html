@@ -18,6 +18,7 @@
             --text-light: #666;
             --white: #ffffff;
             --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow: 0 4px 6px rgba(0);
         }
 
         * {
@@ -1631,6 +1632,125 @@
             }
         }
     </style>
+    <style>
+        /* Created Websites Section */
+.created-websites-section {
+    padding: 3rem 1.5rem;
+    background: var(--white);
+    border-bottom: 5px solid var(--primary);
+}
+
+.websites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.website-card {
+    background: var(--secondary);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.website-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 15px rgba(0, 112, 55, 0.15);
+}
+
+.website-iframe {
+    position: relative;
+    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    overflow: hidden;
+    border-bottom: 1px solid var(--primary-light);
+}
+
+.website-iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: var(--white);
+}
+
+.website-info {
+    padding: 1.2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.website-info h3 {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 0.6rem;
+}
+
+.website-info p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.website-cta {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.3s;
+}
+
+.website-cta:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .websites-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .created-websites-section {
+        padding: 2rem 1rem;
+    }
+
+    .website-card {
+        flex-direction: column;
+    }
+
+    .website-iframe {
+        padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .websites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .website-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .website-info p {
+        font-size: 0.85rem;
+    }
+}
+    </style>
 </head>
 <body>
     <!-- Header -->
@@ -1722,7 +1842,7 @@
                     <i class="fas fa-code"></i>
                 </div>
                 <h3 class="pricing-title">Web Development</h3>
-                <p class="pricing-price">Starting at <span>5000 PKR</span></p>
+                <p class="pricing-price">Starting at <span>19.99$</span></p>
                 <ul class="pricing-features">
                     <li><i class="fas fa-check"></i> Custom Website Design</li>
                     <li><i class="fas fa-check"></i> Responsive Layout</li>
@@ -1826,6 +1946,77 @@
             </div>
         </div>
     </section>
+    <!-- Created Websites Section -->
+<section id="Our Created Websites" class="created-websites-section">
+    <div class="section-container">
+        <div class="section-header" data-aos="fade-up">
+            <h2 class="section-title">Our Created Websites</h2>
+            <p class="section-subtitle">Explore some of the stunning websites we've built for our clients</p>
+        </div>
+        <div class="websites-grid">
+            <div class="website-card" data-aos="zoom-in">
+                <div class="website-iframe">
+                    <iframe src="https://speedytechrepair.com" title="Speedy Tech Repair" loading="lazy"></iframe>
+                </div>
+                <div class="website-info">
+                    <h3>Speedy Tech Repair</h3>
+                    <p>A modern website for tech repair services with a focus on user experience.</p>
+                    <a href="https://speedytechrepair.com" target="_blank" class="website-cta">Visit Site <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="website-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="website-iframe">
+                    <iframe src="https://grittechnologies.com" title="Grit Technologies" loading="lazy"></iframe>
+                </div>
+                <div class="website-info">
+                    <h3>Grit Technologies</h3>
+                    <p>A professional site showcasing innovative technology solutions.</p>
+                    <a href="https://grittechnologies.com" target="_blank" class="website-cta">Visit Site <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="website-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="website-iframe">
+                    <iframe src="https://sultannn-del.github.io" title="Sultan's Portfolio" loading="lazy"></iframe>
+                </div>
+                <div class="website-info">
+                    <h3>Human Rights Website</h3>
+                    <p>A personal portfolio highlighting creative and technical expertise.</p>
+                    <a href="https://sultannn-del.github.io" target="_blank" class="website-cta">Visit Site <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="website-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="website-iframe">
+                    <iframe src="https://www.e-bazaaronline.com" title="E-Bazaar Online" loading="lazy"></iframe>
+                </div>
+                <div class="website-info">
+                    <h3>E-Bazaar Online</h3>
+                    <p>An e-commerce platform designed for seamless shopping experiences.</p>
+                    <a href="https://www.e-bazaaronline.com" target="_blank" class="website-cta">Visit Site <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="website-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="website-iframe">
+                    <iframe src="https://ansira.com/" title="Uberall Listings" loading="lazy"></iframe>
+                </div>
+                <div class="website-info">
+                    <h3>Ansira Listings</h3>
+                    <p>A robust platform for local business listing management.</p>
+                    <a href="https://ansira.com" target="_blank" class="website-cta">Visit Site <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="website-card" data-aos="zoom-in" data-aos-delay="400">
+                <div class="website-iframe">
+                    <iframe src="https://citylocalpro.com/" title="Uberall Listings" loading="lazy"></iframe>
+                </div>
+                <div class="website-info">
+                    <h3>WebFlow</h3>
+                    <p>A robust platform for local business listing management.</p>
+                    <a href="https://citylocalpro.com/" target="_blank" class="website-cta">Visit Site <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Testimonial + Portfolio Section -->
     <section id="Client Success Stories" class="testimonial-portfolio-section">
@@ -2032,7 +2223,9 @@
         </div>
         <div class="about-content">
             <div class="about-text" data-aos="fade-right">
-                <p>GigVox ek premium freelancing agency hai jo web <span>development, graphics designing, aur SEO services</span> provide karti hai. Har project modern design, creative solutions, aur high-quality execution se tayar hota hai. Humara goal businesses ko powerful digital presence dena hai jo unke brand ko next level pe le jaye. Agar apke business ko digital growth aur branding chahiye, toh GigVox aapke liye best partner hai!</p>
+                <p>
+                GigVox is a premium freelancing agency that provides web development, graphic designing, and SEO services. Every project is crafted with modern design, creative solutions, and high-quality execution. Our goal is to provide businesses with a powerful digital presence that takes their brand to the next level. If your business needs digital growth and branding, GigVox is the best partner for you!
+                </p>
                 <div class="about-cta">
                     <a href="#" class="btn btn-primary" onclick="quote()">Get Started</a>
                 </div>
